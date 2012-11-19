@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.description = %q{Gem for interacting with the Facebook Real-time Update API}
 
   s.add_dependency "rack"
-  s.add_dependency "koala", "~> 0.9"
+  s.add_dependency "koala", "~> 1.5.0"
   s.add_dependency "json"
   s.add_development_dependency "minitest", "~> 2.0.2"
   s.add_development_dependency "mocha"

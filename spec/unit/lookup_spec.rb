@@ -15,7 +15,7 @@ class LookupSpec < MiniTest::Spec
         "time"           => 232323
       }
 
-      Koala::Facebook::GraphAPI.any_instance.expects(:get_connections).twice.
+      Koala::Facebook::API.any_instance.expects(:get_connections).twice.
         returns([Realtime::Update.new(nil,nil)])
 
       Realtime::Hub.expects(:publish).twice

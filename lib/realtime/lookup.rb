@@ -17,7 +17,7 @@ module Realtime
 
     def self.collect_updates(user, field, time)
       unless_already_checked(user, field, time) do
-        graph   = Koala::Facebook::GraphAPI.new( access_token_for(user) )
+        graph   = Koala::Facebook::API.new( access_token_for(user) )
         updates = graph.get_connections('me', field, :since => time)
 
         updates.collect { |data| Update.new(field, data) }
